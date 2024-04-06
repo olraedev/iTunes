@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		EC252AC22BC11F9E008C24BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AC12BC11F9E008C24BD /* AppDelegate.swift */; };
 		EC252AC42BC11F9E008C24BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AC32BC11F9E008C24BD /* SceneDelegate.swift */; };
-		EC252AC62BC11F9E008C24BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AC52BC11F9E008C24BD /* ViewController.swift */; };
-		EC252AC92BC11F9E008C24BD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EC252AC82BC11F9E008C24BD /* Base */; };
 		EC252ACB2BC11F9F008C24BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC252ACA2BC11F9F008C24BD /* Assets.xcassets */; };
 		EC252ACE2BC11F9F008C24BD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EC252ACD2BC11F9F008C24BD /* Base */; };
+		EC252ADA2BC12135008C24BD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AD92BC12135008C24BD /* SearchViewController.swift */; };
+		EC252ADC2BC1213F008C24BD /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252ADB2BC1213F008C24BD /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC252ABE2BC11F9E008C24BD /* iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC252AC12BC11F9E008C24BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC252AC32BC11F9E008C24BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC252AC52BC11F9E008C24BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC252AC82BC11F9E008C24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC252ACA2BC11F9F008C24BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC252ACD2BC11F9F008C24BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC252ACF2BC11F9F008C24BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC252AD92BC12135008C24BD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EC252ADB2BC1213F008C24BD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,31 @@
 		EC252AC02BC11F9E008C24BD /* iTunes */ = {
 			isa = PBXGroup;
 			children = (
+				EC252AD72BC1211E008C24BD /* Search */,
+				EC252AD82BC12124008C24BD /* Favorite */,
 				EC252AC12BC11F9E008C24BD /* AppDelegate.swift */,
 				EC252AC32BC11F9E008C24BD /* SceneDelegate.swift */,
-				EC252AC52BC11F9E008C24BD /* ViewController.swift */,
-				EC252AC72BC11F9E008C24BD /* Main.storyboard */,
 				EC252ACA2BC11F9F008C24BD /* Assets.xcassets */,
 				EC252ACC2BC11F9F008C24BD /* LaunchScreen.storyboard */,
 				EC252ACF2BC11F9F008C24BD /* Info.plist */,
 			);
 			path = iTunes;
+			sourceTree = "<group>";
+		};
+		EC252AD72BC1211E008C24BD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EC252AD92BC12135008C24BD /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EC252AD82BC12124008C24BD /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				EC252ADB2BC1213F008C24BD /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +143,6 @@
 			files = (
 				EC252ACB2BC11F9F008C24BD /* Assets.xcassets in Resources */,
 				EC252ACE2BC11F9F008C24BD /* Base in Resources */,
-				EC252AC92BC11F9E008C24BD /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC252AC62BC11F9E008C24BD /* ViewController.swift in Sources */,
+				EC252ADA2BC12135008C24BD /* SearchViewController.swift in Sources */,
 				EC252AC22BC11F9E008C24BD /* AppDelegate.swift in Sources */,
+				EC252ADC2BC1213F008C24BD /* FavoriteViewController.swift in Sources */,
 				EC252AC42BC11F9E008C24BD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EC252AC72BC11F9E008C24BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC252AC82BC11F9E008C24BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC252ACC2BC11F9F008C24BD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,9 +304,10 @@
 				INFOPLIST_FILE = iTunes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +315,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olraedev.iTunes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,9 +336,10 @@
 				INFOPLIST_FILE = iTunes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +347,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.olraedev.iTunes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
