@@ -33,7 +33,7 @@ final class SearchView: BaseView {
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.horizontalEdges.equalTo(safeAreaLayoutGuide)
-            make.height.equalTo(50)
+            make.height.equalTo(30)
         }
         
         tableView.snp.makeConstraints { make in

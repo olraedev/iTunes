@@ -30,6 +30,8 @@
 		EC252B002BC13871008C24BD /* iTunesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AFF2BC13871008C24BD /* iTunesAPIManager.swift */; };
 		EC252B022BC138A8008C24BD /* iTunesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B012BC138A8008C24BD /* iTunesData.swift */; };
 		EC252B052BC13D6E008C24BD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC252B042BC13D6E008C24BD /* Kingfisher */; };
+		EC252B0A2BC148C3008C24BD /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B092BC148C2008C24BD /* UserDefaultsManager.swift */; };
+		EC252B0C2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B0B2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		EC252AFB2BC1358B008C24BD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EC252AFF2BC13871008C24BD /* iTunesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIManager.swift; sourceTree = "<group>"; };
 		EC252B012BC138A8008C24BD /* iTunesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesData.swift; sourceTree = "<group>"; };
+		EC252B092BC148C2008C24BD /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		EC252B0B2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				EC252AF12BC126AA008C24BD /* Resource.swift */,
 				EC252AF72BC12943008C24BD /* Protocols.swift */,
 				EC252AF92BC12981008C24BD /* Extension+UIView.swift */,
+				EC252B092BC148C2008C24BD /* UserDefaultsManager.swift */,
 			);
 			path = iTunes;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			children = (
 				EC252AF32BC128FD008C24BD /* ResultTableViewCell.swift */,
 				EC252AF52BC12930008C24BD /* TagCollectionViewCell.swift */,
+				EC252B0B2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -236,12 +242,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC252B0C2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift in Sources */,
 				EC252AF42BC128FD008C24BD /* ResultTableViewCell.swift in Sources */,
 				EC252ADE2BC122E8008C24BD /* SearchView.swift in Sources */,
 				EC252B022BC138A8008C24BD /* iTunesData.swift in Sources */,
 				EC252AFA2BC12981008C24BD /* Extension+UIView.swift in Sources */,
 				EC252AF22BC126AA008C24BD /* Resource.swift in Sources */,
 				EC252AF82BC12943008C24BD /* Protocols.swift in Sources */,
+				EC252B0A2BC148C3008C24BD /* UserDefaultsManager.swift in Sources */,
 				EC252AFC2BC1358B008C24BD /* SearchViewModel.swift in Sources */,
 				EC252ADA2BC12135008C24BD /* SearchViewController.swift in Sources */,
 				EC252AF62BC12930008C24BD /* TagCollectionViewCell.swift in Sources */,

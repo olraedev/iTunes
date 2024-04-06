@@ -25,10 +25,12 @@ final class SearchViewController: BaseViewController {
     override func bind() {
         let searchText = searchView.searchController.searchBar.rx.text
         let searchButtonClicked = searchView.searchController.searchBar.rx.searchButtonClicked
+        let cancelButtonClicked = searchView.searchController.searchBar.rx.cancelButtonClicked
         
         let input = SearchViewModel.Input(
             searchText: searchText,
-            searchButtonClicked: searchButtonClicked)
+            searchButtonClicked: searchButtonClicked,
+            cancelButtonClicked: cancelButtonClicked)
         let output = viewModel.transform(input)
         
         output.searchResult.drive(searchView.tableView.rx.items(cellIdentifier: ResultTableViewCell.identifier, cellType: ResultTableViewCell.self)) { row, element, cell in

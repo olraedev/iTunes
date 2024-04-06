@@ -18,8 +18,10 @@ class iTunesAPIManager {
     
     static func fetchToiTunesSearch(term: String) -> Observable<iTunesData> {
         
+        let query = term.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
         return Observable<iTunesData>.create { observer in
-            guard let url = URL(string: "https://itunes.apple.com/search?term=\(term)&country=KR&media=software&limit=10&entity=software") else {
+            guard let url = URL(string: "https://itunes.apple.com/search?term=\(query)&country=KR&media=software&limit=10&entity=software") else {
                 
                 observer.onError(APIError.invalidURL)
                 return Disposables.create()
@@ -42,6 +44,7 @@ class iTunesAPIManager {
                     observer.onNext(appData)
                     observer.onCompleted()
                 } else {
+                    print("실패...")
                     observer.onError(APIError.unknownResponse)
                 }
             }.resume()
