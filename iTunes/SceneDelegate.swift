@@ -24,9 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let search = UINavigationController(rootViewController: SearchViewController())
         let favorite = UINavigationController(rootViewController: FavoriteViewController())
         
-        rootViewController.tabBar.backgroundColor = .white
-        rootViewController.tabBar.tintColor = .black
-        rootViewController.tabBar.unselectedItemTintColor = .lightGray
+        rootViewController.tabBar.backgroundColor = Color.basic
+        rootViewController.tabBar.tintColor = Color.primary
+        rootViewController.tabBar.unselectedItemTintColor = Color.secondary
         
         search.tabBarItem = UITabBarItem(title: "search", image: UIImage(systemName: "magnifyingglass"), tag: 0)
         favorite.tabBarItem = UITabBarItem(title: "favorite", image: UIImage(systemName: "star.fill"), tag: 1)

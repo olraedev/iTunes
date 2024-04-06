@@ -13,6 +13,23 @@
 		EC252ACE2BC11F9F008C24BD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EC252ACD2BC11F9F008C24BD /* Base */; };
 		EC252ADA2BC12135008C24BD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AD92BC12135008C24BD /* SearchViewController.swift */; };
 		EC252ADC2BC1213F008C24BD /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252ADB2BC1213F008C24BD /* FavoriteViewController.swift */; };
+		EC252ADE2BC122E8008C24BD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252ADD2BC122E8008C24BD /* SearchView.swift */; };
+		EC252AE12BC1230B008C24BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AE02BC1230B008C24BD /* BaseViewController.swift */; };
+		EC252AE32BC12356008C24BD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AE22BC12356008C24BD /* BaseView.swift */; };
+		EC252AE62BC12377008C24BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AE52BC12377008C24BD /* SnapKit */; };
+		EC252AE92BC1238E008C24BD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AE82BC1238E008C24BD /* RxCocoa */; };
+		EC252AEB2BC1238E008C24BD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AEA2BC1238E008C24BD /* RxSwift */; };
+		EC252AEE2BC12403008C24BD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AED2BC12403008C24BD /* Realm */; };
+		EC252AF02BC12403008C24BD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AEF2BC12403008C24BD /* RealmSwift */; };
+		EC252AF22BC126AA008C24BD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF12BC126AA008C24BD /* Resource.swift */; };
+		EC252AF42BC128FD008C24BD /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF32BC128FD008C24BD /* ResultTableViewCell.swift */; };
+		EC252AF62BC12930008C24BD /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF52BC12930008C24BD /* TagCollectionViewCell.swift */; };
+		EC252AF82BC12943008C24BD /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF72BC12943008C24BD /* Protocols.swift */; };
+		EC252AFA2BC12981008C24BD /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF92BC12981008C24BD /* Extension+UIView.swift */; };
+		EC252AFC2BC1358B008C24BD /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AFB2BC1358B008C24BD /* SearchViewModel.swift */; };
+		EC252B002BC13871008C24BD /* iTunesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AFF2BC13871008C24BD /* iTunesAPIManager.swift */; };
+		EC252B022BC138A8008C24BD /* iTunesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B012BC138A8008C24BD /* iTunesData.swift */; };
+		EC252B052BC13D6E008C24BD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC252B042BC13D6E008C24BD /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +41,17 @@
 		EC252ACF2BC11F9F008C24BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC252AD92BC12135008C24BD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EC252ADB2BC1213F008C24BD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		EC252ADD2BC122E8008C24BD /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		EC252AE02BC1230B008C24BD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EC252AE22BC12356008C24BD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		EC252AF12BC126AA008C24BD /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		EC252AF32BC128FD008C24BD /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		EC252AF52BC12930008C24BD /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC252AF72BC12943008C24BD /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		EC252AF92BC12981008C24BD /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		EC252AFB2BC1358B008C24BD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		EC252AFF2BC13871008C24BD /* iTunesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIManager.swift; sourceTree = "<group>"; };
+		EC252B012BC138A8008C24BD /* iTunesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC252B052BC13D6E008C24BD /* Kingfisher in Frameworks */,
+				EC252AEB2BC1238E008C24BD /* RxSwift in Frameworks */,
+				EC252AE92BC1238E008C24BD /* RxCocoa in Frameworks */,
+				EC252AEE2BC12403008C24BD /* Realm in Frameworks */,
+				EC252AF02BC12403008C24BD /* RealmSwift in Frameworks */,
+				EC252AE62BC12377008C24BD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +90,8 @@
 		EC252AC02BC11F9E008C24BD /* iTunes */ = {
 			isa = PBXGroup;
 			children = (
+				EC252ADF2BC122FD008C24BD /* Base */,
+				EC252AFE2BC13853008C24BD /* API */,
 				EC252AD72BC1211E008C24BD /* Search */,
 				EC252AD82BC12124008C24BD /* Favorite */,
 				EC252AC12BC11F9E008C24BD /* AppDelegate.swift */,
@@ -63,6 +99,9 @@
 				EC252ACA2BC11F9F008C24BD /* Assets.xcassets */,
 				EC252ACC2BC11F9F008C24BD /* LaunchScreen.storyboard */,
 				EC252ACF2BC11F9F008C24BD /* Info.plist */,
+				EC252AF12BC126AA008C24BD /* Resource.swift */,
+				EC252AF72BC12943008C24BD /* Protocols.swift */,
+				EC252AF92BC12981008C24BD /* Extension+UIView.swift */,
 			);
 			path = iTunes;
 			sourceTree = "<group>";
@@ -70,7 +109,10 @@
 		EC252AD72BC1211E008C24BD /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				EC252AFD2BC1383A008C24BD /* Cell */,
+				EC252ADD2BC122E8008C24BD /* SearchView.swift */,
 				EC252AD92BC12135008C24BD /* SearchViewController.swift */,
+				EC252AFB2BC1358B008C24BD /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -81,6 +123,33 @@
 				EC252ADB2BC1213F008C24BD /* FavoriteViewController.swift */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		EC252ADF2BC122FD008C24BD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC252AE22BC12356008C24BD /* BaseView.swift */,
+				EC252AE02BC1230B008C24BD /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC252AFD2BC1383A008C24BD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC252AF32BC128FD008C24BD /* ResultTableViewCell.swift */,
+				EC252AF52BC12930008C24BD /* TagCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EC252AFE2BC13853008C24BD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EC252B012BC138A8008C24BD /* iTunesData.swift */,
+				EC252AFF2BC13871008C24BD /* iTunesAPIManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +168,14 @@
 			dependencies = (
 			);
 			name = iTunes;
+			packageProductDependencies = (
+				EC252AE52BC12377008C24BD /* SnapKit */,
+				EC252AE82BC1238E008C24BD /* RxCocoa */,
+				EC252AEA2BC1238E008C24BD /* RxSwift */,
+				EC252AED2BC12403008C24BD /* Realm */,
+				EC252AEF2BC12403008C24BD /* RealmSwift */,
+				EC252B042BC13D6E008C24BD /* Kingfisher */,
+			);
 			productName = iTunes;
 			productReference = EC252ABE2BC11F9E008C24BD /* iTunes.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +204,12 @@
 				Base,
 			);
 			mainGroup = EC252AB52BC11F9E008C24BD;
+			packageReferences = (
+				EC252AE42BC12377008C24BD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				EC252AE72BC1238E008C24BD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */,
+				EC252B032BC13D6E008C24BD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EC252ABF2BC11F9E008C24BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,10 +236,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC252AF42BC128FD008C24BD /* ResultTableViewCell.swift in Sources */,
+				EC252ADE2BC122E8008C24BD /* SearchView.swift in Sources */,
+				EC252B022BC138A8008C24BD /* iTunesData.swift in Sources */,
+				EC252AFA2BC12981008C24BD /* Extension+UIView.swift in Sources */,
+				EC252AF22BC126AA008C24BD /* Resource.swift in Sources */,
+				EC252AF82BC12943008C24BD /* Protocols.swift in Sources */,
+				EC252AFC2BC1358B008C24BD /* SearchViewModel.swift in Sources */,
 				EC252ADA2BC12135008C24BD /* SearchViewController.swift in Sources */,
+				EC252AF62BC12930008C24BD /* TagCollectionViewCell.swift in Sources */,
 				EC252AC22BC11F9E008C24BD /* AppDelegate.swift in Sources */,
 				EC252ADC2BC1213F008C24BD /* FavoriteViewController.swift in Sources */,
+				EC252B002BC13871008C24BD /* iTunesAPIManager.swift in Sources */,
+				EC252AE32BC12356008C24BD /* BaseView.swift in Sources */,
 				EC252AC42BC11F9E008C24BD /* SceneDelegate.swift in Sources */,
+				EC252AE12BC1230B008C24BD /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +394,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9G88QGSLX7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,6 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9G88QGSLX7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -379,6 +475,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC252AE42BC12377008C24BD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		EC252AE72BC1238E008C24BD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.49.1;
+			};
+		};
+		EC252B032BC13D6E008C24BD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC252AE52BC12377008C24BD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252AE42BC12377008C24BD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		EC252AE82BC1238E008C24BD /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252AE72BC1238E008C24BD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		EC252AEA2BC1238E008C24BD /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252AE72BC1238E008C24BD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		EC252AED2BC12403008C24BD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		EC252AEF2BC12403008C24BD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		EC252B042BC13D6E008C24BD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252B032BC13D6E008C24BD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC252AB62BC11F9E008C24BD /* Project object */;
 }
