@@ -23,7 +23,7 @@ final class TagCollectionViewCell: UICollectionViewCell {
         
         contentView.addSubview(tagButton)
         tagButton.snp.makeConstraints { make in
-            make.height.equalTo(25)
+            make.edges.equalToSuperview()
         }
     }
     

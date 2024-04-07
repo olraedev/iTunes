@@ -54,6 +54,6 @@ class iTunesAPIManager {
             
             return Disposables.create()
             
-        }.debug()
+        }//.debug()
     }
 }

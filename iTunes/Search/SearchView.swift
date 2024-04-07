@@ -50,7 +50,7 @@ final class SearchView: BaseView {
     private func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         
-        layout.itemSize = CGSize(width: 50, height: 30)
+        layout.itemSize = CGSize(width: 60, height: 30)
         layout.minimumInteritemSpacing = 8
         layout.scrollDirection = .horizontal
         

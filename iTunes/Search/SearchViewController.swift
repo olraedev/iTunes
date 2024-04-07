@@ -40,7 +40,6 @@ final class SearchViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         output.recentSearchList.drive(searchView.collectionView.rx.items(cellIdentifier: TagCollectionViewCell.identifier, cellType: TagCollectionViewCell.self)) { row, element, cell in
-            print(element)
             cell.configureCell(element)
         }
         .disposed(by: disposeBag)

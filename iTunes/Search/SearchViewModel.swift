@@ -50,14 +50,13 @@ class SearchViewModel: ViewModelType {
             .distinctUntilChanged()
             .bind(with: self) { owner, text in
                 UserDefaultsManager.shared.setRecentSearchTexts(text: text)
+                recentSearchList.accept(UserDefaultsManager.shared.getRecentSearchTexts())
             }
             .disposed(by: disposeBag)
         
         input.cancelButtonClicked
             .bind(with: self) { _, _ in searchResult.accept([]) }
             .disposed(by: disposeBag)
-        
-        recentSearchList.accept(UserDefaultsManager.shared.getRecentSearchTexts())
         
         return Output(
             searchResult: searchResult.asDriver(onErrorJustReturn: []),
