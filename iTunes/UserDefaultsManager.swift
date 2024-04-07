@@ -18,13 +18,18 @@ class UserDefaultsManager {
     
     private init() { }
     
-    var recentSearchText: [String] {
-        get {
-            userDefaults.array(forKey: Key.recentSearchText.rawValue) as! [String]
+    func getRecentSearchTexts() -> [String] {
+        if let list = userDefaults.array(forKey: Key.recentSearchText.rawValue) {
+            return list as! [String]
         }
         
-        set {
-            userDefaults.setValue(newValue, forKey: Key.recentSearchText.rawValue)
-        }
+        return []
+    }
+    
+    func setRecentSearchTexts(text: String) {
+        var list = getRecentSearchTexts()
+        
+        list.append(text)
+        userDefaults.setValue(list, forKey: Key.recentSearchText.rawValue)
     }
 }

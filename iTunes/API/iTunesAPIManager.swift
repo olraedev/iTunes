@@ -27,7 +27,10 @@ class iTunesAPIManager {
                 return Disposables.create()
             }
             
-            URLSession.shared.dataTask(with: url) { data, response, error in
+            var urlRequest = URLRequest(url: url)
+            urlRequest.setValue("TEST", forHTTPHeaderField: "User-Agent")
+            
+            URLSession.shared.dataTask(with: urlRequest) { data, response, error in
                 if let _ = error {
                     observer.onError(APIError.unknownResponse)
                     return

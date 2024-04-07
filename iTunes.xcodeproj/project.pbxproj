@@ -32,6 +32,9 @@
 		EC252B052BC13D6E008C24BD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC252B042BC13D6E008C24BD /* Kingfisher */; };
 		EC252B0A2BC148C3008C24BD /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B092BC148C2008C24BD /* UserDefaultsManager.swift */; };
 		EC252B0C2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B0B2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift */; };
+		EC252B112BC196CF008C24BD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B102BC196CF008C24BD /* DetailViewController.swift */; };
+		EC252B152BC198F5008C24BD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B142BC198F5008C24BD /* DetailViewModel.swift */; };
+		EC252B172BC28127008C24BD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B162BC28127008C24BD /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		EC252B012BC138A8008C24BD /* iTunesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesData.swift; sourceTree = "<group>"; };
 		EC252B092BC148C2008C24BD /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		EC252B0B2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC252B102BC196CF008C24BD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EC252B142BC198F5008C24BD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		EC252B162BC28127008C24BD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 				EC252ADF2BC122FD008C24BD /* Base */,
 				EC252AFE2BC13853008C24BD /* API */,
 				EC252AD72BC1211E008C24BD /* Search */,
+				EC252B0F2BC196C0008C24BD /* Detail */,
 				EC252AD82BC12124008C24BD /* Favorite */,
 				EC252AC12BC11F9E008C24BD /* AppDelegate.swift */,
 				EC252AC32BC11F9E008C24BD /* SceneDelegate.swift */,
@@ -156,6 +163,16 @@
 				EC252AFF2BC13871008C24BD /* iTunesAPIManager.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		EC252B0F2BC196C0008C24BD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EC252B162BC28127008C24BD /* DetailView.swift */,
+				EC252B102BC196CF008C24BD /* DetailViewController.swift */,
+				EC252B142BC198F5008C24BD /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +262,7 @@
 				EC252B0C2BC169F9008C24BD /* ScreenShotCollectionViewCell.swift in Sources */,
 				EC252AF42BC128FD008C24BD /* ResultTableViewCell.swift in Sources */,
 				EC252ADE2BC122E8008C24BD /* SearchView.swift in Sources */,
+				EC252B152BC198F5008C24BD /* DetailViewModel.swift in Sources */,
 				EC252B022BC138A8008C24BD /* iTunesData.swift in Sources */,
 				EC252AFA2BC12981008C24BD /* Extension+UIView.swift in Sources */,
 				EC252AF22BC126AA008C24BD /* Resource.swift in Sources */,
@@ -252,7 +270,9 @@
 				EC252B0A2BC148C3008C24BD /* UserDefaultsManager.swift in Sources */,
 				EC252AFC2BC1358B008C24BD /* SearchViewModel.swift in Sources */,
 				EC252ADA2BC12135008C24BD /* SearchViewController.swift in Sources */,
+				EC252B112BC196CF008C24BD /* DetailViewController.swift in Sources */,
 				EC252AF62BC12930008C24BD /* TagCollectionViewCell.swift in Sources */,
+				EC252B172BC28127008C24BD /* DetailView.swift in Sources */,
 				EC252AC22BC11F9E008C24BD /* AppDelegate.swift in Sources */,
 				EC252ADC2BC1213F008C24BD /* FavoriteViewController.swift in Sources */,
 				EC252B002BC13871008C24BD /* iTunesAPIManager.swift in Sources */,

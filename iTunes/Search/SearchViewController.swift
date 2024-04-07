@@ -26,6 +26,7 @@ final class SearchViewController: BaseViewController {
         let searchText = searchView.searchController.searchBar.rx.text
         let searchButtonClicked = searchView.searchController.searchBar.rx.searchButtonClicked
         let cancelButtonClicked = searchView.searchController.searchBar.rx.cancelButtonClicked
+        let cellSelected = Observable.zip(searchView.tableView.rx.itemSelected, searchView.tableView.rx.modelSelected(iTunesResult.self))
         
         let input = SearchViewModel.Input(
             searchText: searchText,
@@ -37,11 +38,20 @@ final class SearchViewController: BaseViewController {
             cell.configureCell(element)
         }
         .disposed(by: disposeBag)
-    }
-    
-    override func configureViews() {
-        searchView.collectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.identifier)
-        searchView.tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.identifier)
+        
+        output.recentSearchList.drive(searchView.collectionView.rx.items(cellIdentifier: TagCollectionViewCell.identifier, cellType: TagCollectionViewCell.self)) { row, element, cell in
+            print(element)
+            cell.configureCell(element)
+        }
+        .disposed(by: disposeBag)
+        
+        cellSelected.bind(with: self) { owner, value in
+            let vc = DetailViewController()
+            
+            vc.viewModel.resultData = value.1
+            owner.navigationController?.pushViewController(vc, animated: true)
+        }
+        .disposed(by: disposeBag)
     }
     
     override func configureNavigation() {

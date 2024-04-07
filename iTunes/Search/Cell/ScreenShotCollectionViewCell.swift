@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Kingfisher
 
-class ScreenShotCollectionViewCell: UICollectionViewCell {
+final class ScreenShotCollectionViewCell: UICollectionViewCell {
     
-    let imageView = UIImageView()
+    private let imageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,5 +25,11 @@ class ScreenShotCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureCell(_ item: String) {
+        let url = URL(string: item)
+        
+        imageView.kf.setImage(with: url)
     }
 }

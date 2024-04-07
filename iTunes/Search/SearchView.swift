@@ -15,12 +15,17 @@ final class SearchView: BaseView {
         return view
     }()
     
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+    lazy var collectionView = {
+        let view = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        view.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.identifier)
+        return view
+    }()
     
     lazy var tableView = {
         let view = UITableView()
         view.rowHeight = UITableView.automaticDimension
         view.separatorStyle = .none
+        view.register(ResultTableViewCell.self, forCellReuseIdentifier: ResultTableViewCell.identifier)
         return view
     }()
     
@@ -32,7 +37,7 @@ final class SearchView: BaseView {
     override func configureConstraints() {
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
-            make.horizontalEdges.equalTo(safeAreaLayoutGuide)
+            make.horizontalEdges.equalTo(safeAreaLayoutGuide).inset(16)
             make.height.equalTo(30)
         }
         
@@ -45,7 +50,8 @@ final class SearchView: BaseView {
     private func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         
-        layout.itemSize = CGSize(width: 100, height: 30)
+        layout.itemSize = CGSize(width: 50, height: 30)
+        layout.minimumInteritemSpacing = 8
         layout.scrollDirection = .horizontal
         
         return layout

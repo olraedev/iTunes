@@ -68,10 +68,13 @@ class ResultTableViewCell: UITableViewCell {
         let view = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         view.register(ScreenShotCollectionViewCell.self, forCellWithReuseIdentifier: ScreenShotCollectionViewCell.identifier)
         view.showsHorizontalScrollIndicator = false
+        view.dataSource = self
         return view
     }()
     
-    private let disposeBag = DisposeBag()
+    var images: [String] = []
+    
+    let disposeBag = DisposeBag()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -128,19 +131,13 @@ class ResultTableViewCell: UITableViewCell {
     
     func configureCell(_ item: iTunesResult) {
         let url = URL(string: item.artworkUrl100)
-        let screeshots = BehaviorSubject(value: item.screenshotUrls).asDriver(onErrorJustReturn: [])
         
         artWorkImageView.kf.setImage(with: url)
         nameLabel.text = item.trackCensoredName
         ratingCountLabel.text = "\(item.averageUserRating)"
         sellerNameLabel.text = item.sellerName
         genreLabel.text = item.genres[0]
-        
-        screeshots.drive(screenShotCollectionView.rx.items(cellIdentifier: ScreenShotCollectionViewCell.identifier, cellType: ScreenShotCollectionViewCell.self)){
-            row, element, cell in
-            cell.imageView.kf.setImage(with: URL(string: element))
-        }
-        .disposed(by: disposeBag)
+        images = item.screenshotUrls
     }
     
     private func createLayout() -> UICollectionViewLayout {
@@ -155,5 +152,19 @@ class ResultTableViewCell: UITableViewCell {
         layout.scrollDirection = .horizontal
         
         return layout
+    }
+}
+
+extension ResultTableViewCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScreenShotCollectionViewCell.identifier, for: indexPath) as! ScreenShotCollectionViewCell
+        
+        cell.configureCell(images[indexPath.item])
+        
+        return cell
     }
 }
