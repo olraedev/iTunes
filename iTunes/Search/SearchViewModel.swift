@@ -62,4 +62,12 @@ class SearchViewModel: ViewModelType {
             searchResult: searchResult.asDriver(onErrorJustReturn: []),
             recentSearchList: recentSearchList.asDriver(onErrorJustReturn: []))
     }
+    
+    func addFavorite(_ item: iTunesResult) {
+        let object: iTunesModel = iTunesModel(screenshotUrls: item.screenshotUrls, artworkUrl100: item.artworkUrl100, averageUserRating: item.averageUserRating, trackCensoredName: item.trackCensoredName, sellerName: item.sellerName, genres: item.genres, descriptions: item.description)
+        
+        DataBaseManager.shared.add(object: object)
+        
+        print(DataBaseManager.shared.readAll())
+    }
 }

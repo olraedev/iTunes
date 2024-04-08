@@ -25,7 +25,7 @@ class ResultTableViewCell: UITableViewCell {
         return view
     }()
     
-    private let addButton = {
+    let addButton = {
         let view = UIButton()
         view.setTitle("받기", for: .normal)
         view.setTitleColor(Color.basic, for: .normal)

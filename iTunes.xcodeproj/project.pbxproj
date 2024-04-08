@@ -19,8 +19,6 @@
 		EC252AE62BC12377008C24BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AE52BC12377008C24BD /* SnapKit */; };
 		EC252AE92BC1238E008C24BD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AE82BC1238E008C24BD /* RxCocoa */; };
 		EC252AEB2BC1238E008C24BD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AEA2BC1238E008C24BD /* RxSwift */; };
-		EC252AEE2BC12403008C24BD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AED2BC12403008C24BD /* Realm */; };
-		EC252AF02BC12403008C24BD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC252AEF2BC12403008C24BD /* RealmSwift */; };
 		EC252AF22BC126AA008C24BD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF12BC126AA008C24BD /* Resource.swift */; };
 		EC252AF42BC128FD008C24BD /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF32BC128FD008C24BD /* ResultTableViewCell.swift */; };
 		EC252AF62BC12930008C24BD /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252AF52BC12930008C24BD /* TagCollectionViewCell.swift */; };
@@ -35,6 +33,10 @@
 		EC252B112BC196CF008C24BD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B102BC196CF008C24BD /* DetailViewController.swift */; };
 		EC252B152BC198F5008C24BD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B142BC198F5008C24BD /* DetailViewModel.swift */; };
 		EC252B172BC28127008C24BD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B162BC28127008C24BD /* DetailView.swift */; };
+		EC252B1A2BC2A5F7008C24BD /* iTunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B192BC2A5F7008C24BD /* iTunesModel.swift */; };
+		EC252B1C2BC2A6F7008C24BD /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252B1B2BC2A6F7008C24BD /* DataBaseManager.swift */; };
+		EC252B1F2BC2AB27008C24BD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EC252B1E2BC2AB27008C24BD /* Realm */; };
+		EC252B212BC2AB27008C24BD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC252B202BC2AB27008C24BD /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		EC252B102BC196CF008C24BD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EC252B142BC198F5008C24BD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		EC252B162BC28127008C24BD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		EC252B192BC2A5F7008C24BD /* iTunesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesModel.swift; sourceTree = "<group>"; };
+		EC252B1B2BC2A6F7008C24BD /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +73,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC252B212BC2AB27008C24BD /* RealmSwift in Frameworks */,
 				EC252B052BC13D6E008C24BD /* Kingfisher in Frameworks */,
 				EC252AEB2BC1238E008C24BD /* RxSwift in Frameworks */,
 				EC252AE92BC1238E008C24BD /* RxCocoa in Frameworks */,
-				EC252AEE2BC12403008C24BD /* Realm in Frameworks */,
-				EC252AF02BC12403008C24BD /* RealmSwift in Frameworks */,
 				EC252AE62BC12377008C24BD /* SnapKit in Frameworks */,
+				EC252B1F2BC2AB27008C24BD /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 			children = (
 				EC252ADF2BC122FD008C24BD /* Base */,
 				EC252AFE2BC13853008C24BD /* API */,
+				EC252B182BC2A5DB008C24BD /* Realm */,
 				EC252AD72BC1211E008C24BD /* Search */,
 				EC252B0F2BC196C0008C24BD /* Detail */,
 				EC252AD82BC12124008C24BD /* Favorite */,
@@ -175,6 +180,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		EC252B182BC2A5DB008C24BD /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				EC252B192BC2A5F7008C24BD /* iTunesModel.swift */,
+				EC252B1B2BC2A6F7008C24BD /* DataBaseManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +209,9 @@
 				EC252AE52BC12377008C24BD /* SnapKit */,
 				EC252AE82BC1238E008C24BD /* RxCocoa */,
 				EC252AEA2BC1238E008C24BD /* RxSwift */,
-				EC252AED2BC12403008C24BD /* Realm */,
-				EC252AEF2BC12403008C24BD /* RealmSwift */,
 				EC252B042BC13D6E008C24BD /* Kingfisher */,
+				EC252B1E2BC2AB27008C24BD /* Realm */,
+				EC252B202BC2AB27008C24BD /* RealmSwift */,
 			);
 			productName = iTunes;
 			productReference = EC252ABE2BC11F9E008C24BD /* iTunes.app */;
@@ -230,8 +244,8 @@
 			packageReferences = (
 				EC252AE42BC12377008C24BD /* XCRemoteSwiftPackageReference "SnapKit" */,
 				EC252AE72BC1238E008C24BD /* XCRemoteSwiftPackageReference "RxSwift" */,
-				EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */,
 				EC252B032BC13D6E008C24BD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				EC252B1D2BC2AB27008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = EC252ABF2BC11F9E008C24BD /* Products */;
 			projectDirPath = "";
@@ -264,10 +278,12 @@
 				EC252ADE2BC122E8008C24BD /* SearchView.swift in Sources */,
 				EC252B152BC198F5008C24BD /* DetailViewModel.swift in Sources */,
 				EC252B022BC138A8008C24BD /* iTunesData.swift in Sources */,
+				EC252B1A2BC2A5F7008C24BD /* iTunesModel.swift in Sources */,
 				EC252AFA2BC12981008C24BD /* Extension+UIView.swift in Sources */,
 				EC252AF22BC126AA008C24BD /* Resource.swift in Sources */,
 				EC252AF82BC12943008C24BD /* Protocols.swift in Sources */,
 				EC252B0A2BC148C3008C24BD /* UserDefaultsManager.swift in Sources */,
+				EC252B1C2BC2A6F7008C24BD /* DataBaseManager.swift in Sources */,
 				EC252AFC2BC1358B008C24BD /* SearchViewModel.swift in Sources */,
 				EC252ADA2BC12135008C24BD /* SearchViewController.swift in Sources */,
 				EC252B112BC196CF008C24BD /* DetailViewController.swift in Sources */,
@@ -521,20 +537,20 @@
 				minimumVersion = 6.6.0;
 			};
 		};
-		EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				kind = exactVersion;
-				version = 10.49.1;
-			};
-		};
 		EC252B032BC13D6E008C24BD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 7.11.0;
+			};
+		};
+		EC252B1D2BC2AB27008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.49.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -555,20 +571,20 @@
 			package = EC252AE72BC1238E008C24BD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		EC252AED2BC12403008C24BD /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		EC252AEF2BC12403008C24BD /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EC252AEC2BC12403008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
 		EC252B042BC13D6E008C24BD /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EC252B032BC13D6E008C24BD /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		EC252B1E2BC2AB27008C24BD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252B1D2BC2AB27008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		EC252B202BC2AB27008C24BD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC252B1D2BC2AB27008C24BD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

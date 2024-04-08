@@ -18,6 +18,7 @@ final class SearchView: BaseView {
     lazy var collectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         view.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.identifier)
+        view.showsHorizontalScrollIndicator = false
         return view
     }()
     

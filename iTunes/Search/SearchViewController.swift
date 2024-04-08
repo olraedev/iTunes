@@ -36,6 +36,10 @@ final class SearchViewController: BaseViewController {
         
         output.searchResult.drive(searchView.tableView.rx.items(cellIdentifier: ResultTableViewCell.identifier, cellType: ResultTableViewCell.self)) { row, element, cell in
             cell.configureCell(element)
+            cell.addButton.rx.tap.bind(with: self) { owner, _ in
+                owner.viewModel.addFavorite(element)
+            }
+            .disposed(by: cell.disposeBag)
         }
         .disposed(by: disposeBag)
         
