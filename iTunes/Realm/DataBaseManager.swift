@@ -15,7 +15,7 @@ class DataBaseManager {
     
     private init() { print(realm.configuration.fileURL!) }
     
-    func add(object: Object) {
+    func add(object: iTunesModel) {
         do {
             try realm.write {
                 realm.add(object)
@@ -27,5 +27,17 @@ class DataBaseManager {
     
     func readAll() -> [iTunesModel] {
         return Array(realm.objects(iTunesModel.self))
+    }
+    
+    func delete(object: iTunesModel) {
+        let item = realm.objects(iTunesModel.self).where { $0.trackCensoredName == object.trackCensoredName }
+        
+        do {
+            try realm.write {
+                realm.delete(item)
+            }
+        } catch {
+            print(error)
+        }
     }
 }

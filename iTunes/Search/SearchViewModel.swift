@@ -32,7 +32,12 @@ class SearchViewModel: ViewModelType {
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .withLatestFrom(input.searchText.orEmpty)
             .distinctUntilChanged()
-            .flatMap { iTunesAPIManager.fetchToiTunesSearch(term: $0) }
+            .flatMap {
+                iTunesAPIManager.fetchToiTunesSearch(term: $0)
+                    .catch { error in
+                        return Observable<iTunesData>.just(iTunesData(results: []))
+                    }
+            }
             .subscribe(with: self) { owner, result in
                 let data = result.results
                 searchResult.accept(data)
@@ -67,7 +72,5 @@ class SearchViewModel: ViewModelType {
         let object: iTunesModel = iTunesModel(screenshotUrls: item.screenshotUrls, artworkUrl100: item.artworkUrl100, averageUserRating: item.averageUserRating, trackCensoredName: item.trackCensoredName, sellerName: item.sellerName, genres: item.genres, descriptions: item.description)
         
         DataBaseManager.shared.add(object: object)
-        
-        print(DataBaseManager.shared.readAll())
     }
 }
